@@ -23,6 +23,8 @@ def sound(indata, frames, times, status):
         compteur +=1
         print(f"Un tir a été détecté : {compteur} tirs")
         time.sleep(0.2)
+        # Ici j'ai mis un timer car j'avais un problème, dès que le programme entendait un son il incrémentait le compteur sauf que si le son durait un peu 
+        # dans le temps, il ajoutait plusieurs valeurs au compteur
         
 with sounddevice.InputStream(callback=sound, samplerate=frequence, channels=1):
     # "with sounddevice" permet d'ouvrir son micro et de capturer jusqu'à ce que l'onn sorte du with

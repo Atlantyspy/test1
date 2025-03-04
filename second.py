@@ -1,13 +1,12 @@
 from tkinter import *
 
 def hello():
-    for i in range(3, 0, -1):
-        print(i)
+    print("Hello")
 
 window = Tk()
 window.title("My Application")
-window.geometry("1000x750")
-window.minsize(600, 500)
+window.geometry("1024x600")
+window.minsize(1024, 600)
 window.config(background="#30384a")
 
 frame = Frame(window, bg="#30384a")
